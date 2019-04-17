@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  node:
+    build: ./backend/
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+    restart: on-failure
+  app:
+    build: ./soccer-league/
+    ports:
+      - '80:3000'
+    depends_on:
+      - node
+    restart: on-failure
+    links:
+      - node
+  db:
+    image: mysql:latest
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
