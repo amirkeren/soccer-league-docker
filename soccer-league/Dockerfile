@@ -8,7 +8,6 @@ RUN mkdir /home/app \
 
 WORKDIR /home/app/soccer-league/soccer-league
 
-COPY package*.json ./
 RUN npm install
 
 EXPOSE 80
