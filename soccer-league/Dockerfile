@@ -8,7 +8,7 @@ RUN mkdir /home/app \
 
 WORKDIR /home/app/soccer-league/soccer-league
 
-ENV HOST=db
+ENV DB_HOST=db
 
 RUN npm install
 
