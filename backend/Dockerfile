@@ -8,6 +8,8 @@ RUN mkdir /home/app \
 
 WORKDIR /home/app/soccer-league/backend
 
+ENV HOST=db
+
 RUN npm install
 
 CMD npm test && npm start
