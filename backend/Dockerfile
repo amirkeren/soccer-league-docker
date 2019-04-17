@@ -8,7 +8,7 @@ RUN mkdir /home/app \
 
 WORKDIR /home/app/soccer-league/backend
 
-COPY package*.json ./
+COPY /home/app/soccer-league/backend/package*.json ./
 RUN npm install
 
 CMD npm test && npm start
