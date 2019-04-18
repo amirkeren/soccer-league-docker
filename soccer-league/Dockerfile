@@ -9,9 +9,6 @@ RUN mkdir /home/app \
 WORKDIR /home/app/soccer-league/soccer-league
 
 ENV DB_HOST=db
-#ENV CORS_ENABLED=true
-#ENV NODE_HOST=node
-
 RUN npm install
 
 EXPOSE 80
