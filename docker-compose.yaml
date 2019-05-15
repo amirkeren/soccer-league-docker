@@ -9,7 +9,7 @@ services:
       - db
     restart: on-failure
     volumes:
-      - /home/amir.k/players:/home/app/soccer-league/backend/players
+      - /home/amir.k/players:/home/app/soccer-league/backend/players:z
   app:
     build: ./soccer-league/
     ports:
