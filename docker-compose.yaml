@@ -8,6 +8,8 @@ services:
     depends_on:
       - db
     restart: on-failure
+    volumes:
+      - /home/amir.k/players:/home/app/soccer-league/backend/players
   app:
     build: ./soccer-league/
     ports:
