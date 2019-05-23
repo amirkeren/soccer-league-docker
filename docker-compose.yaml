@@ -17,6 +17,8 @@ services:
     depends_on:
       - node
     restart: on-failure
+    volumes:
+      - /home/amir.k/player_pictures:/home/app/soccer-league/soccer-league/public/player_pictures:z
     links:
       - node
   db:
